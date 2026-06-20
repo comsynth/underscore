@@ -150,31 +150,22 @@ h1 {
   }
 
   
-
-  .title {
+.title {
   display: block;
   white-space: normal;
-  overflow-wrap: break-word;
-  word-break: break-word;
-  }
-
-  h1,
-.title {
   max-width: 100%;
-  white-space: normal;
   overflow-wrap: anywhere;
   word-break: break-word;
 }
 
- 
-  h1 {
-    font-size: clamp(1.4rem, 7vw, 2.5rem);
-    letter-spacing: 0.04em;
-    margin-bottom: 32px;
-    max-width: 100%;
-    overflow-wrap: anywhere;
-    word-break: break-word;
-  }
+h1 {
+  font-size: clamp(1.4rem, 7vw, 2.5rem);
+  letter-spacing: 0.04em;
+  margin-bottom: 32px;
+  max-width: 100%;
+  overflow-wrap: anywhere;
+  word-break: break-word;
+}
 
 
   .lyrics {
