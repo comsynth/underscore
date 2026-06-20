@@ -149,8 +149,13 @@ h1 {
     letter-spacing: 0.04em;
   }
 
+  
+
   .title {
-    white-space: normal;
+  display: block;
+  white-space: normal;
+  overflow-wrap: break-word;
+  word-break: break-word;
   }
 
   h1 {
