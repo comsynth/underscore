@@ -180,7 +180,9 @@ h1 {
 }
 
 .track {
-  margin-bottom: 16px;
+  display: block;
+  line-height: 1.9;
+  margin-bottom: 14px;
 }
 }
 
