@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>kid_blue</title>
+<meta name="description" content="kid_blue">
+<link rel="icon" type="image/png" href="images/ico.png">
+<link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+
+<main class="page">
+  <a href="https://open.spotify.com/album/0lxahfJTZNRPjF5NgTnVJU?si=bzmUeT3bTGq-Z6i50tTDmw" target="_blank" rel="noopener noreferrer">
+    <img class="logo" src="images/kidblue_final.png" alt="kid_blue">
+  </a>
+
+  <section class="track-box" aria-label="Track list">
+    <div class="track"><span class="number">01.</span><a class="track-link" href="bloodbath.html"><span class="title">bloodbath</span></a></div>
+    <div class="track"><span class="number">02.</span><a class="track-link" href="take_me_out.html"><span class="title">take me out</span></a></div>
+    <div class="track"><span class="number">03.</span><a class="track-link" href="love_song.html"><span class="title">love song</span></a></div>
+    <div class="track"><span class="number">04.</span><a class="track-link" href="teleprompter.html"><span class="title">teleprompter</span></a></div>
+    <div class="track"><span class="number">05.</span><a class="track-link" href="dont_associate_me_with_them.html"><span class="title">don't associate me with them</span></a></div>
+    <div class="track"><span class="number">06.</span><a class="track-link" href="fate.html"><span class="title">fate (interlude)</span></a></div>
+    <div class="track"><span class="number">07.</span><a class="track-link" href="together_again.html"><span class="title">together again</span></a></div>
+    <div class="track"><span class="number">08.</span><a class="track-link" href="dont_you_like_me_around.html"><span class="title">don't you like me around?</span></a></div>
+    <div class="track"><span class="number">09.</span><a class="track-link" href="can_you_hear_it.html"><span class="title">can you hear it</span></a></div>
+    <div class="track"><span class="number">10.</span><a class="track-link" href="i_know_you.html"><span class="title">i know you</span></a></div>
+  </section>
+
+  <div class="footer-note">coming 26626</div>
+</main>
+
+<script>
+function filenameVersion(text) {
+  return text
+    .toLowerCase()
+    .replace(/[()'".,!?]/g, "")
+    .trim()
+    .replace(/\s+/g, "_");
+}
+
+document.querySelectorAll(".title").forEach(title => {
+  const original = title.textContent;
+  const isMobile = window.matchMedia("(max-width: 700px)").matches;
+
+  const hoverText =
+    original === "bloodbath"
+      ? "_bloodbath"
+      : original === "teleprompter"
+      ? "_teleprompter"
+      : original === "don't associate me with them" && isMobile
+      ? "dont_associate"
+      : filenameVersion(original);
+
+  title.addEventListener("mouseenter", () => {
+    title.textContent = hoverText;
+  });
+
+  title.addEventListener("mouseleave", () => {
+    title.textContent = original;
+  });
+});
+</script>
+
+</body>
+</html>
