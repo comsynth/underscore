@@ -91,7 +91,9 @@ h1 {
   letter-spacing: 0.04em;
   font-weight: 400!important;
   max-width: 900px;
+   text-transform: lowercase;
 }
+
 
 .lyrics p + p {
   margin-top: 32px;
