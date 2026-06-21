@@ -128,3 +128,22 @@
     display: none;
   }
 }
+
+.landing-page {
+  overflow: hidden;
+}
+
+.landing-page .page {
+  min-height: 100svh;
+}
+
+@media (max-width: 800px) {
+  .landing-page .page {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 32px 24px;
+    text-align: center;
+  }
+}
