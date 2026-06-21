@@ -16,10 +16,6 @@
   <a href="https://open.spotify.com/album/0lxahfJTZNRPjF5NgTnVJU?si=bzmUeT3bTGq-Z6i50tTDmw" target="_blank" rel="noopener noreferrer">
     <img class="logo" src="images/block_logo.svg" alt="kid_blue">
 
-    <div class="logo-wrap">
-  <img src="images/block_logo.svg" class="logo-shadow" alt="">
-  <img src="images/block_logo.svg" class="logo-main" alt="BLOCK">
-</div>
 
 
   </a>
@@ -69,24 +65,6 @@ document.querySelectorAll(".title").forEach(title => {
   title.addEventListener("mouseleave", () => {
     title.textContent = original;
   });
-});
-</script>
-
-<script>
-const root = document.documentElement;
-const logo = document.querySelector(".logo-wrap");
-
-window.addEventListener("mousemove", (e) => {
-  const rect = logo.getBoundingClientRect();
-
-  const logoX = rect.left + rect.width / 2;
-  const logoY = rect.top + rect.height / 2;
-
-  const dx = logoX - e.clientX;
-  const dy = logoY - e.clientY;
-
-  root.style.setProperty("--shadow-x", `${dx * 0.08}px`);
-  root.style.setProperty("--shadow-y", `${dy * 0.08}px`);
 });
 </script>
 
