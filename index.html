@@ -9,6 +9,34 @@
 <link rel="stylesheet" href="css/styles.css">
 </head>
 
+<div id="flashlight"></div>
+
+<script>
+const flashlight = document.getElementById("flashlight");
+
+document.addEventListener("mousemove", (e) => {
+  const x = e.clientX;
+  const y = e.clientY;
+
+  flashlight.style.setProperty("--x", `${x}px`);
+  flashlight.style.setProperty("--y", `${y}px`);
+
+  document.querySelectorAll(".track-box, .lyric-box, .logo")
+    .forEach(el => {
+
+      const rect = el.getBoundingClientRect();
+      const cx = rect.left + rect.width / 2;
+      const cy = rect.top + rect.height / 2;
+
+      const dx = (cx - x) / 40;
+      const dy = (cy - y) / 40;
+
+      el.style.boxShadow =
+        `${dx}px ${dy}px 30px rgba(0,0,0,.45)`;
+    });
+});
+</script>
+
 <body>
 
 <main class="page">

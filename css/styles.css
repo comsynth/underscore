@@ -228,3 +228,11 @@ h1 {
 
   mix-blend-mode: screen;
 }
+
+.track-box,
+.lyric-box,
+.logo {
+  transition:
+    transform .15s ease,
+    box-shadow .15s ease;
+}
