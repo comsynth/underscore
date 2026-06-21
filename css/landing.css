@@ -1,0 +1,128 @@
+/* landing page only */
+
+.landing-page {
+  overflow: hidden;
+}
+
+.landing-page::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background: radial-gradient(
+    circle 700px at var(--x, 50%) var(--y, 50%),
+    rgba(75, 111, 138, 0.03) 0%,
+    rgba(75, 111, 138, 0.01) 25%,
+    transparent 55%
+  );
+  pointer-events: none;
+  z-index: 5;
+  mix-blend-mode: screen;
+}
+
+.brand {
+  letter-spacing: .35em;
+  font-size: 28px;
+  margin-bottom: 12px;
+}
+
+.sub {
+  font-size: 16px;
+  opacity: .8;
+}
+
+.nav {
+  margin-top: 60px;
+  line-height: 1.8;
+  font-size: 16px;
+}
+
+.hero-logo {
+  position: absolute;
+  left: 50%;
+  top: 48%;
+  width: 620px;
+  max-width: 70vw;
+  transform: translate(-50%, -50%);
+}
+
+.logo-wrap {
+  position: relative;
+  width: 100%;
+}
+
+.logo-shadow,
+.logo-main {
+  display: block;
+  width: 100%;
+}
+
+.logo-shadow {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  opacity: .10;
+  filter: brightness(0);
+  pointer-events: none;
+  animation: shadowDrift 18s ease-in-out infinite alternate;
+}
+
+.logo-main {
+  position: relative;
+  z-index: 2;
+  filter:
+    drop-shadow(0 0 8px rgba(75, 111, 138, .5))
+    drop-shadow(0 8px 10px rgba(0, 0, 0, .7));
+}
+
+.player {
+  position: absolute;
+  right: 48px;
+  bottom: 48px;
+  font-size: 16px;
+  letter-spacing: .12em;
+  text-align: right;
+}
+
+@keyframes shadowDrift {
+  0% { transform: translate(6px, 6px); }
+  25% { transform: translate(8px, 7px); }
+  50% { transform: translate(10px, 9px); }
+  75% { transform: translate(8px, 11px); }
+  100% { transform: translate(7px, 10px); }
+}
+
+@media (max-width: 800px) {
+  .landing-page .page {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 32px 24px;
+    text-align: center;
+  }
+
+  .brand {
+    margin-bottom: 40px;
+  }
+
+  .hero-logo {
+    position: relative;
+    left: auto;
+    top: auto;
+    width: 90vw;
+    max-width: 500px;
+    margin-bottom: 40px;
+    transform: none;
+  }
+
+  .player {
+    position: relative;
+    right: auto;
+    bottom: auto;
+    text-align: center;
+  }
+
+  .landing-page .underscore {
+    display: none;
+  }
+}
