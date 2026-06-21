@@ -9,46 +9,6 @@
 <link rel="stylesheet" href="css/styles.css">
 </head>
 
-<div id="flashlight"></div>
-
-<script>
-const shadowItems = document.querySelectorAll(
-  ".logo, .track-box, .lyric-box"
-);
-
-document.addEventListener("mousemove", (e) => {
-  const x = e.clientX;
-  const y = e.clientY;
-
-  document.documentElement.style.setProperty("--mouse-x", `${x}px`);
-  document.documentElement.style.setProperty("--mouse-y", `${y}px`);
-
-  shadowItems.forEach((el) => {
-    const rect = el.getBoundingClientRect();
-
-    const cx = rect.left + rect.width / 2;
-    const cy = rect.top + rect.height / 2;
-
-    const dx = (cx - x);
-    const dy = (cy - y);
-
-    el.style.filter = `
-      drop-shadow(
-        ${dx * 0.08}px
-        ${dy * 0.08}px
-        2px
-        rgba(0,0,0,.95)
-      )
-      drop-shadow(
-        ${dx * 0.15}px
-        ${dy * 0.15}px
-        8px
-        rgba(0,0,0,.7)
-      )
-    `;
-  });
-});
-</script>
 
 <body>
 
