@@ -32,7 +32,6 @@ body {
   margin-bottom: 48px;
   opacity: 0;
   animation: logoReveal 0.8s ease forwards;
-  cursor: pointer;
   transition: opacity .2s ease;
 }
 
