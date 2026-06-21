@@ -207,3 +207,24 @@ h1 {
   from { opacity: 0; }
   to { opacity: 1; }
 }
+
+
+#flashlight {
+  --x: 50vw;
+  --y: 50vh;
+
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 999;
+
+  background:
+    radial-gradient(
+      circle 220px at var(--x) var(--y),
+      rgba(255,255,255,.08) 0%,
+      rgba(255,255,255,.04) 25%,
+      rgba(0,0,0,0) 50%
+    );
+
+  mix-blend-mode: screen;
+}
