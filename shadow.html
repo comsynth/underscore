@@ -78,25 +78,7 @@ body::before {
   width: 100%;
 }
 
-.logo-shadow {
-  position: absolute;
-  inset: 0;
-  z-index: 1;
-  opacity: .85;
-  filter: brightness(0);
-  transform:
-    translate(
-      calc(var(--shadow-x, 80px) * 1),
-      calc(var(--shadow-y, 80px) * 1)
-    )
-    skew(
-      calc(var(--shadow-skew, -8deg) * 1),
-      calc(var(--shadow-skew-y, 2deg) * 1)
-    )
-    scale(1.25, 1.08);
-  transform-origin: center;
-  filter: brightness(0) blur(2px);
-}
+
 
 .logo-main {
   position: relative;
@@ -212,28 +194,7 @@ body::before {
     </div>
   </main>
 
-<script>
-const root = document.documentElement;
 
-window.addEventListener("mousemove", (e) => {
-  const x = e.clientX;
-  const y = e.clientY;
-
-  root.style.setProperty("--x", `${x}px`);
-  root.style.setProperty("--y", `${y}px`);
-
-  const centerX = window.innerWidth / 2;
-  const centerY = window.innerHeight / 2;
-
-  const shadowX = (centerX - x) * 0.22;
-  const shadowY = (centerY - y) * 0.22;
-
-  root.style.setProperty("--shadow-x", `${shadowX}px`);
-  root.style.setProperty("--shadow-y", `${shadowY}px`);
-  root.style.setProperty("--shadow-skew", `${shadowX * -0.04}deg`);
-  root.style.setProperty("--shadow-skew-y", `${shadowY * 0.02}deg`);
-});
-</script>
 
 </body>
 </html>
