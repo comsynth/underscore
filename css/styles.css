@@ -6,8 +6,9 @@
 
 
 body {
-  background-color: #1e1e1e;
+ 
   background-image: url("images/texture.png");
+   background-color: #1e1e1e;
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
