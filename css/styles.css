@@ -19,8 +19,9 @@ body {
   font-family: Helvetica, Arial, sans-serif;
 }
 
+
 .page {
-  min-height: 100vh;
+  min-height: 100svh;
   padding: 48px;
   position: relative;
 }
@@ -177,6 +178,7 @@ h1 {
 
 @media (max-width: 800px) {
   .page {
+     min-height: auto;
     padding: 26px;
   }
 
@@ -233,6 +235,7 @@ h1 {
     text-align: left;
   }
 }
+
 
 /* touch devices */
 
