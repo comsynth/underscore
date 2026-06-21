@@ -17,6 +17,7 @@ body {
   color: #4B6F8A;
   font-family: Helvetica, Arial, sans-serif;
   min-height: 100vh;
+  cursor: none;
 }
 
 .page {
