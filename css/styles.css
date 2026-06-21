@@ -12,6 +12,7 @@ body {
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
+  background-attachment: fixed;
 
   color: #4B6F8A;
   font-family: Helvetica, Arial, sans-serif;
