@@ -41,10 +41,21 @@ function filenameVersion(text) {
     .trim()
     .replace(/\s+/g, "_");
 
-  return cleaned.includes("_")
-    ? cleaned
-    : "_" + cleaned;
+  return cleaned.includes("_") ? cleaned : "_" + cleaned;
 }
+
+document.querySelectorAll(".title").forEach(title => {
+  const original = title.textContent;
+  const hoverText = filenameVersion(original);
+
+  title.addEventListener("mouseenter", () => {
+    title.textContent = hoverText;
+  });
+
+  title.addEventListener("mouseleave", () => {
+    title.textContent = original;
+  });
+});
 </script>
 
 </body>
