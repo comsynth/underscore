@@ -225,3 +225,9 @@ h1 {
   pointer-events: none;
   z-index: 9999;
 }
+
+@media (hover: none), (pointer: coarse) {
+  .underscore {
+    display: none;
+  }
+}
