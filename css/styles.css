@@ -28,7 +28,7 @@ body {
 
 .logo {
   display: block;
-  width: min(38vw, 300px);
+  width: min(38vw, 400px);
   margin-bottom: 48px;
   opacity: 0;
   animation: logoReveal 0.8s ease forwards;
