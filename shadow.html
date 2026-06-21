@@ -139,6 +139,42 @@ body::before {
 
 <link rel="stylesheet" href="css/styles.css">
 
+<style>
+
+.logo-shadow {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  opacity: .10;
+  filter: brightness(0);
+
+  animation: shadowDrift 18s ease-in-out infinite alternate;
+}
+
+@keyframes shadowDrift {
+  0% {
+    transform: translate(6px, 6px);
+  }
+
+  25% {
+    transform: translate(8px, 7px);
+  }
+
+  50% {
+    transform: translate(10px, 9px);
+  }
+
+  75% {
+    transform: translate(8px, 11px);
+  }
+
+  100% {
+    transform: translate(7px, 10px);
+  }
+}
+
+</style>
+
 </head>
 
 <body>
