@@ -35,25 +35,16 @@
 
 <script>
 function filenameVersion(text) {
-  return "_" + text
+  const cleaned = text
     .toLowerCase()
     .replace(/[()'".,!?]/g, "")
     .trim()
     .replace(/\s+/g, "_");
+
+  return cleaned.includes("_")
+    ? cleaned
+    : "_" + cleaned;
 }
-
-document.querySelectorAll(".title").forEach(title => {
-  const original = title.textContent;
-  const hoverText = filenameVersion(original);
-
-  title.addEventListener("mouseenter", () => {
-    title.textContent = hoverText;
-  });
-
-  title.addEventListener("mouseleave", () => {
-    title.textContent = original;
-  });
-});
 </script>
 
 </body>
