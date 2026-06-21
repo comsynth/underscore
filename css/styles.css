@@ -207,3 +207,29 @@ h1 {
   from { opacity: 0; }
   to { opacity: 1; }
 }
+
+.logo-wrap {
+  position: relative;
+  display: inline-block;
+}
+
+.logo-main {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+}
+
+.logo-shadow {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  opacity: .35;
+  filter: brightness(0);
+  pointer-events: none;
+
+  transform:
+    translate(var(--shadow-x, 20px),
+              var(--shadow-y, 20px));
+
+  transition: transform .08s linear;
+}
