@@ -149,12 +149,10 @@ body::before {
   letter-spacing: .12em;
 }
 </style>
-</head>
-
+<script src="js/cursor.js"></script>
 <body>
+<main class="page">
   <div class="underscore"></div>
-
-  <main class="page">
     <div class="brand">underscore</div>
     <!--<div class="sub">coming 26626</div>-->
 
@@ -189,14 +187,6 @@ body::before {
     </div>
   </main>
 
-<script>
-const root = document.documentElement;
-
-window.addEventListener("mousemove", (e) => {
-  root.style.setProperty("--x", `${e.clientX}px`);
-  root.style.setProperty("--y", `${e.clientY}px`);
-});
-</script>
 
 </body>
 </html>
