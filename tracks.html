@@ -34,15 +34,8 @@
 </main>
 
 <script>
-const root = document.documentElement;
-
-window.addEventListener("mousemove", (e) => {
-  root.style.setProperty("--x", `${e.clientX}px`);
-  root.style.setProperty("--y", `${e.clientY}px`);
-});
-
 function filenameVersion(text) {
-  return text
+  return "_" + text
     .toLowerCase()
     .replace(/[()'".,!?]/g, "")
     .trim()
@@ -51,16 +44,7 @@ function filenameVersion(text) {
 
 document.querySelectorAll(".title").forEach(title => {
   const original = title.textContent;
-  const isMobile = window.matchMedia("(max-width: 700px)").matches;
-
-  const hoverText =
-    original === "bloodbath"
-      ? "_bloodbath"
-      : original === "teleprompter"
-      ? "_teleprompter"
-      : original === "don't associate me with them" && isMobile
-      ? "dont_associate"
-      : filenameVersion(original);
+  const hoverText = filenameVersion(original);
 
   title.addEventListener("mouseenter", () => {
     title.textContent = hoverText;
