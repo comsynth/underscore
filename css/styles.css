@@ -40,6 +40,7 @@ body {
 
 /* logo */
 
+/*
 .logo {
   display: block;
   width: min(38vw, 400px);
@@ -52,6 +53,7 @@ body {
 .logo:hover {
   opacity: .85;
 }
+  */
 
 /* track + lyric boxes */
 
