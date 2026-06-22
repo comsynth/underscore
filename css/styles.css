@@ -298,12 +298,13 @@ h1 {
   opacity: 0;
 }
 
+/*
 .page-logo:hover .logo-main,
 .hero-logo:hover .logo-main {
   filter:
     drop-shadow(0 0 12px rgba(75, 111, 138, .8))
     drop-shadow(0 0 24px rgba(75, 111, 138, .3));
-}
+}*/
 
 @media (max-width: 800px) {
 
