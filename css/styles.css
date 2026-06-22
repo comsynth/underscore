@@ -317,3 +317,21 @@ h1 {
   }
 
 }
+
+.page-logo .logo-shadow,
+.hero-logo .logo-shadow {
+  opacity: 0.18;
+  transition: opacity 0.35s ease, transform 0.35s ease;
+}
+
+.page-logo:hover .logo-shadow,
+.hero-logo:hover .logo-shadow,
+.logo-wrap:hover .logo-shadow {
+  opacity: 0;
+}
+
+.page-logo:hover .logo-main,
+.hero-logo:hover .logo-main,
+.logo-wrap:hover .logo-main {
+  opacity: 0.85;
+}
