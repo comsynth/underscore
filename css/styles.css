@@ -290,3 +290,13 @@ h1 {
     drop-shadow(0 0 8px rgba(75, 111, 138, .5))
     drop-shadow(0 8px 10px rgba(0, 0, 0, .7));
 }
+
+@media (max-width: 800px) {
+
+  .page-logo {
+    width: 100%;
+    max-width: none;
+    margin-bottom: 28px;
+  }
+
+}
