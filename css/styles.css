@@ -281,7 +281,9 @@ h1 {
   filter: brightness(0);
   pointer-events: none;
   animation: shadowDrift 18s ease-in-out infinite alternate;
+  transition: opacity .35s ease;
 }
+
 
 .logo-main {
   position: relative;
@@ -289,6 +291,18 @@ h1 {
   filter:
     drop-shadow(0 0 8px rgba(75, 111, 138, .5))
     drop-shadow(0 8px 10px rgba(0, 0, 0, .7));
+}
+
+.page-logo:hover .logo-shadow,
+.hero-logo:hover .logo-shadow {
+  opacity: 0;
+}
+
+.page-logo:hover .logo-main,
+.hero-logo:hover .logo-main {
+  filter:
+    drop-shadow(0 0 12px rgba(75, 111, 138, .8))
+    drop-shadow(0 0 24px rgba(75, 111, 138, .3));
 }
 
 @media (max-width: 800px) {
