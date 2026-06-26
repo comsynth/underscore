@@ -188,3 +188,14 @@
     display: none;
   }
 }
+
+@media (max-width: 800px) {
+  .links {
+    position: absolute;
+    bottom: 40px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    text-align: center;
+  }
+}
