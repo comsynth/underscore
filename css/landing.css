@@ -174,8 +174,8 @@
   }
 
   .streaming-links {
-    flex-direction: column;
-    gap: 24px;
+  
+    gap: 14px;
     margin-top: 24px;
   }
 
